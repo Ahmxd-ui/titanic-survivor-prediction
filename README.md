@@ -1,96 +1,133 @@
 # 🚢 Titanic Survival Prediction
 
 ## 🎯 Objective
-To build a Machine Learning model that predicts which passengers survived the Titanic shipwreck with high accuracy, moving from a baseline model to an optimized production-ready pipeline.
+Build a **Machine Learning model** that predicts passenger survival on the Titanic with high accuracy.  
+The project progresses from a **baseline model** to an **optimized, production-ready ML pipeline** using hyperparameter tuning.
+
+---
 
 ## ❓ Problem
-The challenge is a binary classification problem: using passenger data (such as Age, Sex, Class, and Fare) to predict survival (0 = Died, 1 = Survived) for a test set where the outcome is hidden.
+This is a **binary classification task**.
+
+Using passenger features such as:
+- Age
+- Sex
+- Passenger Class (Pclass)
+- Fare
+
+The goal is to predict:
+- **0 → Did not survive**
+- **1 → Survived**
+
+The test dataset does not include labels, simulating a real-world inference scenario.
+
+---
 
 ## 🛠 Tech Stack
-* **Language:** Python 3.10+
-* **Data Manipulation:** Pandas, NumPy
-* **Machine Learning:** Scikit-Learn (Random Forest, Logistic Regression, GridSearchCV)
-* **Visualization:** Matplotlib, Seaborn
+
+- **Language:** Python 3.10+
+- **Data Manipulation:** Pandas, NumPy
+- **Machine Learning:** Scikit-Learn  
+  - Logistic Regression  
+  - Random Forest  
+  - GridSearchCV
+- **Visualization:** Matplotlib, Seaborn
+
+---
 
 ## 📂 Project Structure
-```text
-├── data/                  # Contains train.csv and test.csv
-├── notebooks/             # Jupyter Notebooks for EDA and visuals
+
+titanic_survivor_project/
+├── data/ # train.csv and test.csv
+├── notebooks/ # EDA and visualizations
 ├── src/
-│   ├── main.py            # Baseline model pipeline
-│   └── main_tuned.py      # Optimized model with Hyperparameter Tuning
-├── requirements.txt       # Python dependencies
-└── README.md              # Project documentation
+│ ├── main.py # Baseline ML pipeline
+│ └── main_tuned.py # Optimized model with hyperparameter tuning
+├── requirements.txt # Python dependencies
+└── README.md # Project documentation
 
-🚀 How to Run
 
-    Clone the repository:
-    Bash
+---
 
-git clone [https://github.com/Ahmxd-ui/titanic_survivor_project.git](https://github.com/Ahmxd-ui/titanic_survivor_project.git)
+## 🚀 How to Run
+
+### Clone the Repository
+```bash
+git clone https://github.com/Ahmxd-ui/titanic_survivor_project.git
 cd titanic_survivor_project
 
-Install dependencies:
-Bash
+Install Dependencies
 
 pip install -r requirements.txt
 
-Run the Tuned Model (Best Accuracy):
-Bash
+Run the Tuned Model (Best Accuracy)
 
-    python src/main_tuned.py
+python src/main_tuned.py
 
-    This will perform Grid Search and save submission_tuned.csv.
+📁 Output:
+
+    Generates submission_tuned.csv
+
+    Uses the best model found via GridSearchCV
 
 📋 Examples
-
-Input Data (Raw):
+Input Data (Raw)
 PassengerId	Pclass	Sex	Age
 1	3	male	22.0
 2	1	female	38.0
-
-Output File (submission_tuned.csv):
+Output File (submission_tuned.csv)
 PassengerId	Survived
 892	0
 893	1
-🧩 Pattern Placeholder
+🧩 Machine Learning Pipeline
 
-This project follows a standard ETL (Extract, Transform, Load) Machine Learning pipeline:
-Code snippet
+This project follows a standard ETL + ML workflow:
 
-graph LR
-    A[Raw Data] --> B(Clean Data Function)
-    B --> C{Training Phase}
-    C -->|Train Split| D[GridSearchCV Tuning]
-    D --> E[Best Model: Random Forest]
-    E --> F[Final Predictions]
-    
-    style A fill:#f9f,stroke:#333
-    style E fill:#bbf,stroke:#333
+Raw Data
+   ↓
+Data Cleaning & Feature Engineering
+   ↓
+Train / Validation Split
+   ↓
+GridSearchCV (Hyperparameter Tuning)
+   ↓
+Best Model (Random Forest)
+   ↓
+Final Predictions
 
-🧪 Tests
+🧪 Tests & Evaluation
 
-    Validation Strategy: 80/20 Train-Test split.
+    Validation Strategy: 80 / 20 Train–Test Split
 
-    Metrics Used: Accuracy Score, Confusion Matrix.
+    Evaluation Metrics:
 
-    Current Performance:
+        Accuracy Score
 
-        Baseline (Logistic Regression): ~79%
+        Confusion Matrix
 
-        Tuned Random Forest: ~83.3%
+📊 Model Performance
+
+    Baseline (Logistic Regression): ~79%
+
+    Tuned Random Forest: ~83.3%
 
 💡 Key Takeaways
 
-    Built a reusable data cleaning pipeline (handling missing values for Age/Embarked).
+    Built a reusable data preprocessing pipeline
 
-    Implemented automated Hyperparameter Tuning using GridSearchCV.
+    Handled missing values (Age, Embarked)
 
-    Solved "Environment Hell" by using a dedicated Python venv.
+    Applied automated hyperparameter tuning
+
+    Improved accuracy using ensemble learning
+
+    Eliminated environment issues using a dedicated virtual environment
 
 🔐 Authentication
 
-No authentication is required. This is a standalone local script.
+No authentication required.
+This is a standalone local machine learning project.
 📜 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License.
+See the LICENSE file for more details.
