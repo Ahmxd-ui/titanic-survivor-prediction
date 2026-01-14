@@ -54,16 +54,17 @@ titanic_survivor_project/
 ### Clone the Repository
 ```bash
 git clone https://github.com/Ahmxd-ui/titanic_survivor_project.git
-cd titanic_survivor_project
+cd titanic_survivor_project 
+```
 
 Install Dependencies
-
+```bash
 pip install -r requirements.txt
-
+```
 Run the Tuned Model (Best Accuracy)
-
+```bash
 python src/main_tuned.py
-
+```
 📁 Output:
 
     Generates submission_tuned.csv
@@ -79,10 +80,11 @@ Output File (submission_tuned.csv)
 PassengerId	Survived
 892	0
 893	1
+
 🧩 Machine Learning Pipeline
 
 This project follows a standard ETL + ML workflow:
-
+```powershell
 Raw Data
    ↓
 Data Cleaning & Feature Engineering
@@ -94,7 +96,7 @@ GridSearchCV (Hyperparameter Tuning)
 Best Model (Random Forest)
    ↓
 Final Predictions
-
+```
 🧪 Tests & Evaluation
 
     Validation Strategy: 80 / 20 Train–Test Split
