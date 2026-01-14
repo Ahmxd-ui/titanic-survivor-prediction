@@ -21,13 +21,14 @@ The challenge is a binary classification problem: using passenger data (such as 
 │   └── main_tuned.py      # Optimized model with Hyperparameter Tuning
 ├── requirements.txt       # Python dependencies
 └── README.md              # Project documentation
+```
 
 ##🚀 How to Run
 
     Clone the repository:
     Bash
 
-git clone [https://github.com/YOUR_USERNAME/titanic_survivor_project.git](https://github.com/YOUR_USERNAME/titanic_survivor_project.git)
+git clone https://github.com/Ahmxd-ui/titanic_survivor_project.git
 cd titanic_survivor_project
 
 Install dependencies:
@@ -42,12 +43,15 @@ Bash
 
     This will perform Grid Search and save submission_tuned.csv.
 
+
 ##📋 Examples
 
 Input Data (Raw): | PassengerId | Pclass | Sex | Age | | :--- | :--- | :--- | :--- | | 1 | 3 | male | 22.0 | | 2 | 1 | female | 38.0 |
 
 Output File (submission_tuned.csv): | PassengerId | Survived | | :--- | :--- | | 892 | 0 | | 893 | 1 |
-🧩 Pattern Placeholder
+
+
+##🧩 Pattern Placeholder
 
 This project follows a standard ETL (Extract, Transform, Load) Machine Learning pipeline:
 Code snippet
@@ -62,6 +66,7 @@ graph LR
     style A fill:#f9f,stroke:#333
     style E fill:#bbf,stroke:#333
 
+
 ##🧪 Tests
 
     Validation Strategy: 80/20 Train-Test split.
@@ -74,6 +79,7 @@ graph LR
 
         Tuned Random Forest: ~83.3%
 
+
 ##💡 Key Takeaways
 
     Built a reusable data cleaning pipeline (handling missing values for Age/Embarked).
@@ -82,9 +88,11 @@ graph LR
 
     Solved "Environment Hell" by using a dedicated Python venv.
 
+
 ##🔐 Authentication
 
 No authentication is required. This is a standalone local script.
+
 
 ##📜 License
 
