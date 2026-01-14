@@ -22,7 +22,7 @@ The challenge is a binary classification problem: using passenger data (such as 
 ├── requirements.txt       # Python dependencies
 └── README.md              # Project documentation
 
-🚀 How to Run
+##🚀 How to Run
 
     Clone the repository:
     Bash
@@ -42,7 +42,7 @@ Bash
 
     This will perform Grid Search and save submission_tuned.csv.
 
-📋 Examples
+##📋 Examples
 
 Input Data (Raw): | PassengerId | Pclass | Sex | Age | | :--- | :--- | :--- | :--- | | 1 | 3 | male | 22.0 | | 2 | 1 | female | 38.0 |
 
@@ -62,7 +62,7 @@ graph LR
     style A fill:#f9f,stroke:#333
     style E fill:#bbf,stroke:#333
 
-🧪 Tests
+##🧪 Tests
 
     Validation Strategy: 80/20 Train-Test split.
 
@@ -74,7 +74,7 @@ graph LR
 
         Tuned Random Forest: ~83.3%
 
-💡 Key Takeaways
+##💡 Key Takeaways
 
     Built a reusable data cleaning pipeline (handling missing values for Age/Embarked).
 
@@ -82,22 +82,12 @@ graph LR
 
     Solved "Environment Hell" by using a dedicated Python venv.
 
-🔐 Authentication
+##🔐 Authentication
 
 No authentication is required. This is a standalone local script.
-📜 License
+
+##📜 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 
-### **One Final Step**
-Since the **License** section refers to a file, make sure you create that file so the link works:
-
-1.  Create a file named `LICENSE` (no extension) in your root folder.
-2.  Paste the MIT License text I gave you in the previous message into it.
-3.  **Push everything to GitHub:**
-    ```bash
-    git add .
-    git commit -m "Finalized README with architecture diagram"
-    git push
-    ```
