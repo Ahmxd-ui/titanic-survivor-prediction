@@ -1,3 +1,5 @@
+Markdown
+
 # 🚢 Titanic Survival Prediction
 
 ## 🎯 Objective
@@ -21,24 +23,19 @@ The challenge is a binary classification problem: using passenger data (such as 
 │   └── main_tuned.py      # Optimized model with Hyperparameter Tuning
 ├── requirements.txt       # Python dependencies
 └── README.md              # Project documentation
-```
+
 🚀 How to Run
 
     Clone the repository:
     Bash
 
-git clone https://github.com/Ahmxd-ui/titanic_survivor_project.git
+git clone [https://github.com/YOUR_USERNAME/titanic_survivor_project.git](https://github.com/YOUR_USERNAME/titanic_survivor_project.git)
 cd titanic_survivor_project
 
 Install dependencies:
 Bash
 
 pip install -r requirements.txt
-
-Run the Standard Model:
-Bash
-
-python src/main.py
 
 Run the Tuned Model (Best Accuracy):
 Bash
@@ -51,17 +48,31 @@ Bash
 
 Input Data (Raw): | PassengerId | Pclass | Sex | Age | | :--- | :--- | :--- | :--- | | 1 | 3 | male | 22.0 | | 2 | 1 | female | 38.0 |
 
-Output File (submission.csv): | PassengerId | Survived | | :--- | :--- | | 892 | 0 | | 893 | 1 |
+Output File (submission_tuned.csv): | PassengerId | Survived | | :--- | :--- | | 892 | 0 | | 893 | 1 |
 🧩 Pattern Placeholder
 
-(This section is reserved for future architectural diagrams or design patterns used in the pipeline.)
+This project follows a standard ETL (Extract, Transform, Load) Machine Learning pipeline:
+Code snippet
+
+graph LR
+    A[Raw Data] --> B(Clean Data Function)
+    B --> C{Training Phase}
+    C -->|Train Split| D[GridSearchCV Tuning]
+    D --> E[Best Model: Random Forest]
+    E --> F[Final Predictions]
+    
+    style A fill:#f9f,stroke:#333
+    style E fill:#bbf,stroke:#333
+
 🧪 Tests
 
     Validation Strategy: 80/20 Train-Test split.
 
     Metrics Used: Accuracy Score, Confusion Matrix.
 
-    Current Performance: * Baseline: ~79%
+    Current Performance:
+
+        Baseline (Logistic Regression): ~79%
 
         Tuned Random Forest: ~83.3%
 
