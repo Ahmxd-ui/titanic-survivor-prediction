@@ -22,7 +22,8 @@ The challenge is a binary classification problem: using passenger data (such as 
 │   ├── main.py            # Baseline model pipeline
 │   └── main_tuned.py      # Optimized model with Hyperparameter Tuning
 ├── requirements.txt       # Python dependencies
-└── README.md              # Project documentation```
+└── README.md              # Project documentation
+```
 
 🚀 How to Run
 
