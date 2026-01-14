@@ -43,8 +43,8 @@ titanic_survivor_project/
 ├── src/
 │ ├── main.py # Baseline ML pipeline
 │ └── main_tuned.py # Optimized model with hyperparameter tuning
-├── requirements.txt # Python dependencies
-└── README.md # Project documentation
+├── README.md # Project documentation
+└── requirements.txt # Python dependencies
 ```
 
 ---
