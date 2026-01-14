@@ -36,7 +36,7 @@ The test dataset does not include labels, simulating a real-world inference scen
 ---
 
 ## 📂 Project Structure
-
+```
 titanic_survivor_project/
 ├── data/ # train.csv and test.csv
 ├── notebooks/ # EDA and visualizations
@@ -45,7 +45,7 @@ titanic_survivor_project/
 │ └── main_tuned.py # Optimized model with hyperparameter tuning
 ├── requirements.txt # Python dependencies
 └── README.md # Project documentation
-
+```
 
 ---
 
@@ -65,29 +65,30 @@ Run the Tuned Model (Best Accuracy)
 ```bash
 python src/main_tuned.py
 ```
-📁 Output:
+## 📁 Output:
 
     Generates submission_tuned.csv
 
     Uses the best model found via GridSearchCV
 
-📋 Examples
+## 📋 Examples
 
-Input Data (Raw)
+**Input Data (Raw):**
 
-PassengerId	Pclass	Sex	Age
+| PassengerId | Pclass | Sex | Age |
+| :--- | :--- | :--- | :--- |
+| 892 | 3 | male | 22.0 |
+| 893 | 1 | female | 38.0 |
 
-1	3	male	22.0
-2	1	female	38.0
+**Output File (`submission_tuned.csv`):**
 
-Output File (submission_tuned.csv)
+| PassengerId | Survived |
+| :--- | :--- |
+| 892 | 0 |
+| 893 | 1 |
 
-PassengerId	Survived
 
-892	0
-893	1
-
-🧩 Machine Learning Pipeline
+## 🧩 Machine Learning Pipeline
 
 This project follows a standard ETL + ML workflow:
 ```powershell
@@ -103,7 +104,7 @@ Best Model (Random Forest)
    ↓
 Final Predictions
 ```
-🧪 Tests & Evaluation
+## 🧪 Tests & Evaluation
 
     Validation Strategy: 80 / 20 Train–Test Split
 
@@ -113,13 +114,13 @@ Final Predictions
 
         Confusion Matrix
 
-📊 Model Performance
+## 📊 Model Performance
 
     Baseline (Logistic Regression): ~79%
 
     Tuned Random Forest: ~83.3%
 
-💡 Key Takeaways
+## 💡 Key Takeaways
 
     Built a reusable data preprocessing pipeline
 
@@ -131,12 +132,12 @@ Final Predictions
 
     Eliminated environment issues using a dedicated virtual environment
 
-🔐 Authentication
+## 🔐 Authentication
 
 No authentication required.
 This is a standalone local machine learning project.
 
-📜 License
+## 📜 License
 
 This project is licensed under the MIT License.
 See the LICENSE file for more details.
