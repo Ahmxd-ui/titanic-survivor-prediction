@@ -22,14 +22,14 @@ The challenge is a binary classification problem: using passenger data (such as 
 │   ├── main.py            # Baseline model pipeline
 │   └── main_tuned.py      # Optimized model with Hyperparameter Tuning
 ├── requirements.txt       # Python dependencies
-└── README.md              # Project documentation
+└── README.md              # Project documentation```
 
 🚀 How to Run
 
     Clone the repository:
     Bash
 
-git clone [https://github.com/YOUR_USERNAME/titanic_survivor_project.git](https://github.com/YOUR_USERNAME/titanic_survivor_project.git)
+git clone https://github.com/Ahmxd-ui/titanic_survivor_project.git
 cd titanic_survivor_project
 
 Install dependencies:
