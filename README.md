@@ -72,12 +72,18 @@ python src/main_tuned.py
     Uses the best model found via GridSearchCV
 
 📋 Examples
+
 Input Data (Raw)
+
 PassengerId	Pclass	Sex	Age
+
 1	3	male	22.0
 2	1	female	38.0
+
 Output File (submission_tuned.csv)
+
 PassengerId	Survived
+
 892	0
 893	1
 
@@ -129,6 +135,7 @@ Final Predictions
 
 No authentication required.
 This is a standalone local machine learning project.
+
 📜 License
 
 This project is licensed under the MIT License.
