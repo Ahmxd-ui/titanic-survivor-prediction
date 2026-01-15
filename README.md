@@ -96,7 +96,7 @@ Raw Data
    ↓
 Data Cleaning & Feature Engineering
    ↓
-Train / Validation Split
+Train / Test Split
    ↓
 GridSearchCV (Hyperparameter Tuning)
    ↓
