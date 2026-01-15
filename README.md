@@ -134,7 +134,7 @@ Final Predictions
 
 ## 🔐 Authentication
 
-No authentication required.
+No authentication required
 This is a standalone local machine learning project.
 
 ## 📜 License
