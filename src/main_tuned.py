@@ -1,6 +1,9 @@
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import GridSearchCV
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 
 def clean_data(df,age,mode):
     
@@ -73,3 +76,27 @@ output = pd.DataFrame({
 #save the file 
 output.to_csv('data/submission_tuned.csv', index=False)
 print('Success !!!')
+
+#this part is for ploting 
+best_model = grid_search.best_estimator_
+importances = best_model.feature_importances_
+
+
+feature_names = X_train.columns 
+
+#create
+feat_imp_df = pd.DataFrame({
+    'Feature': feature_names,
+    'Importance': importances
+}).sort_values(by='Importance', ascending=False)
+
+#plot
+plt.figure(figsize=(10, 6))
+sns.barplot(x='Importance', y='Feature', hue='Feature', data=feat_imp_df, palette='viridis',legend=False)
+plt.title('Model Insights: Which Features Determined Survival?', fontsize=14)
+plt.xlabel('Feature Importance Score')
+plt.ylabel('Feature Name')
+plt.tight_layout()
+
+print("Generating Feature Importance Plot...")
+plt.show()
